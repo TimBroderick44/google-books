@@ -1,0 +1,36 @@
+.form  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 400px;
+    height: 20px;
+    margin: 5px 10px; 
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 80%);
+    padding: 3px 10px 3px 10px;
+    &::placeholder{
+    font-style: italic;
+    }
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    transition: 0.3s;
+    box-shadow: 0 0 5px hsl(0, 0%, 80%);
+    &:hover {
+        background-color: hsl(0, 0%, 80%);
+        color: #faf6f6;
+    }
+}

@@ -1,0 +1,114 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+}
+
+.expandedBook {
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    bottom: 10%;
+    left: 20%;
+    width: 60%;
+    background-color: #F4F4F4;
+    padding: 30px;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    scrollbar-color: hsl(38, 4%, 58%) hsla(0, 0%, 98%, 0);
+}
+
+.title {
+    margin: 0px 2px 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 800px;
+}
+
+.author {
+    font-style: italic;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.category,
+.rating,
+.pageCount,
+.date,
+.publisher,
+.price,
+.link {
+    font-size: 12px;
+    margin: 0px;
+}
+
+.description {
+    margin: 20px 0 20px 0;
+    height: 100px; // set a fixed height for the collapsed state
+    overflow: hidden;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: linear-gradient(to bottom, transparent, #F4F4F4);
+    }
+}
+
+.expanded {
+    height: auto;
+    overflow: visible;
+    &:after {
+        display: none; 
+    }
+}
+
+.img {
+    width: 200px;
+    height: 300px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.imgBtn {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closeBtn {
+    font-size: 20px;
+    cursor: pointer;
+    border-style: none;
+    padding: 2px 7px 1px 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    margin-bottom: 0px;
+    &:hover {
+        background-color: hsl(0, 0%, 70%);
+        color: white;
+    }
+    &__corner {
+        @extend .closeBtn;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+    }
+}
+
+

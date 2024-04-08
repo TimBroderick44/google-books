@@ -1,0 +1,25 @@
+.grid {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    transition: filter 0.3s;
+
+    &.blur {
+        filter: blur(5px);
+    }
+}
+
+.expandedBook {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    z-index: 10;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}

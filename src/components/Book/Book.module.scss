@@ -1,0 +1,42 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.book {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0; 
+    background-color: #F4F4F4;
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2px 0 2px 0;
+    cursor: pointer;
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1);
+}   
+
+.title, .author, .description {
+    margin: 0;
+}
+
+.title{
+    margin-top: 5px;
+}
+
+.author {
+    font-style: italic;
+}
+
+img {
+    width: 100px;
+    height: 130px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
