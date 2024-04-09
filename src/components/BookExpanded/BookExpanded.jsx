@@ -64,7 +64,7 @@ const BookExpanded = ({ book, onClose }) => {
                     dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
                 />
                 {showToggle && (
-                    <button onClick={toggleDescription}>
+                    <button className={style.moreBtn} onClick={toggleDescription}>
                         {isExpanded ? "Read Less" : "Read More"}
                     </button>
                 )}
