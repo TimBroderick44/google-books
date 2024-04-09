@@ -46,9 +46,7 @@ const BookExpanded = ({ book, onClose }) => {
                         ? book.volumeInfo.categories[0]
                         : "No category available"}
                 </p>
-                <p className={style.rating}>
-                    {book.volumeInfo.averageRating || "No rating available"}
-                </p>
+                <p className={style.rating}> {book.volumeInfo.averageRating || "No rating available"} out of 5 stars. </p>
                 <p className={style.pageCount}>
                     {book.volumeInfo.pageCount} pages
                 </p>
@@ -91,7 +89,7 @@ const BookExpanded = ({ book, onClose }) => {
                 <div className={style.imgBtn}>
                     <img
                         className={style.img}
-                        src={book.volumeInfo.imageLinks?.thumbnail}
+                        src={`https://books.google.com/books/publisher/content/images/frontcover/${book.id}?fife=w400-h600&source=gbs_api`}
                         alt={`Cover of ${book.volumeInfo.title}`}
                     />
                     <br />
