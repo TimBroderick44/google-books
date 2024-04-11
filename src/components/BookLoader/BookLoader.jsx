@@ -13,23 +13,28 @@ const BookLoader = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        // If there is a search term, fetch the books
         if (searchTerm !== null) {
             setError(null);
             setLoading(true);
 
+            // Same as with Martyna & Alex
             getBooksBySearchTerm(searchTerm)
                 .then((data) => setBookData(data))
                 .catch((error) => setError(error))
                 .finally(() => setLoading(false));
         }
+    // dependent on any changes to the search term  
     }, [searchTerm]);
 
     return (
-        <Flexbox>
+        <>
+        <Flexbox flexdirection="column" alignitems="center" >
             {loading && <Loading />}
             {!loading && error && <Error error={error} />}
             {!loading && bookData && <BookGrid bookData={bookData} />}
         </Flexbox>
+        </>
     );
 };
 

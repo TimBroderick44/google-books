@@ -12,14 +12,16 @@ const BookGrid = ({ bookData }) => {
 
     return (
         <div className={style.grid}>
+            {/* Map over the bookData and return a Book component for each book */}
             {bookData.map((book, index) => {
                 const { volumeInfo } = book;
                 const { title, authors, description, imageLinks } = volumeInfo;
                 const imgSRC =
                     imageLinks && imageLinks.thumbnail
                         ? imageLinks.thumbnail
-                        : "book-solid.svg";
+                        : "book.png";
 
+                // Add a delay to the animation
                 const delay = `${index * 0.1}s`;
                 return (
                     <Book
@@ -32,11 +34,13 @@ const BookGrid = ({ bookData }) => {
                                 : "No description available."
                         }
                         imgSRC={imgSRC}
+                        // Sets the selected as the book we want more info on. 
                         onClick={() => handleBookClick(book)}
                         style={{ animationDelay: delay }}
                     />
                 );
             })}
+            {/* If a book is selected, render the BookExpandedLoader component */}
             {selectedBook && (
                 <BookExpandedLoader
                     book={selectedBook}

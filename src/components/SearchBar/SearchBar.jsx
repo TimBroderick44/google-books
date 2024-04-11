@@ -3,8 +3,10 @@ import { SearchContext } from "../../context/SearchProvider.jsx";
 import style from "./SearchBar.module.scss";
 
 const SearchBar = () => {
+    // Get the onSearch function from the SearchContext
     const { onSearch } = useContext(SearchContext);
 
+    // When the form is submitted, get the search term and call onSearch
     const onSubmit = (e) => {
         e.preventDefault();
         const form = e.target;

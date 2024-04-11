@@ -1,14 +1,30 @@
-.heading {
+.middleHeading {
     font-weight: 400;
     margin: -30px 20px 0 100px;
-    text-align: center;
     color: black;   
     text-shadow: 1px 1px 5px rgba(70, 67, 67, 0.089);
 }
 
-.logo {
-width: 600px;
-height: 100px;
-margin-bottom: 0;
+.middleLogo {
+    width: 600px;
+    height: 100px;
+    margin-bottom: 0;
 }
+
+.topLogo {
+    width: 350px;
+    height: 60px;
+    margin-left: 5px;
+    transition: width 1s ease, height 1s ease;
+}
+
+.topHeading {
+    @extend .middleHeading;
+    font-size: 14px;
+    margin: -25px 0 0 40px;
+    transition: font-size 1s ease;
+}
+
+
+
 

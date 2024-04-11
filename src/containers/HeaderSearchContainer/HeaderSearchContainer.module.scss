@@ -1,5 +1,6 @@
 .box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -16,3 +17,4 @@
     margin-top: 200px;
     transition: margin-top 0.5s ease;
 }
+

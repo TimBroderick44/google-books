@@ -3,17 +3,16 @@ import SearchBar from "./components/SearchBar/SearchBar.jsx";
 import BookLoader from "./components/BookLoader/BookLoader.jsx";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import FlexboxBordered from "./containers/FlexboxBordered/FlexboxBordered.jsx";
+import HeaderSearchContainer from "./containers/HeaderSearchContainer/HeaderSearchContainer.jsx";
 import "./App.module.scss";
 
 function App() {
-
     return (
         <SearchProvider>
-            <FlexboxBordered>
+            <HeaderSearchContainer>
                 <Header />
                 <SearchBar />
-            </FlexboxBordered>
+            </HeaderSearchContainer>
             <BookLoader />
             <Footer />
         </SearchProvider>

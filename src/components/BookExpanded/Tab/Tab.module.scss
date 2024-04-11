@@ -1,0 +1,11 @@
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    font-weight: normal;
+
+    &.active {
+        border-bottom: 2px solid blue;
+        font-weight: bold;
+    }
+}
