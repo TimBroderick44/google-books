@@ -1,0 +1,24 @@
+.button, a.button {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s;
+    box-shadow: 0 0 5px hsl(0, 0%, 80%);
+    &:hover {
+        background-color: hsl(0, 0%, 95%);
+        color: #1a73e8;
+    }
+}
+
+
+
+
+

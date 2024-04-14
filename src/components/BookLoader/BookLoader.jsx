@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import { SearchContext } from "../../context/SearchProvider.jsx";
+import { SearchContext } from "../../context/SearchContext.jsx";
 import BookGrid from "../BookGrid/BookGrid.jsx";
 import Error from "../Error/Error.jsx";
 import Loading from "../Loading/Loading.jsx";
 import Flexbox from "../../containers/Flexbox/Flexbox.jsx";
-import { getBooksBySearchTerm } from "../../services/book-services.js";
+import { fetchBooks } from "../../services/book-services.js"; 
+import { DelayContext } from "../../context/DelayContext.jsx";
 
 const BookLoader = () => {
-    const { searchTerm } = useContext(SearchContext);
+    const { searchTerm, searchType, bookFilter } = useContext(SearchContext);  
+    const { delay } = useContext(DelayContext);  
     const [bookData, setBookData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -18,14 +20,21 @@ const BookLoader = () => {
             setError(null);
             setLoading(true);
 
-            // Same as with Martyna & Alex
-            getBooksBySearchTerm(searchTerm)
-                .then((data) => setBookData(data))
-                .catch((error) => setError(error))
-                .finally(() => setLoading(false));
+            setTimeout(() => {
+                fetchBooks(searchTerm, searchType, bookFilter)
+                    .then((data) => {
+                        setBookData(data);
+                    })
+                    .catch((err) => {
+                        console.error("Error fetching:", err);
+                        setError(err.message); // Use err.message to display a more user-friendly message
+                    })
+                    .finally(() => {
+                        setLoading(false);
+                    });
+            }, delay); // Apply delay
         }
-    // dependent on any changes to the search term  
-    }, [searchTerm]);
+    }, [searchTerm, searchType, bookFilter, delay]);;
 
     return (
         <>

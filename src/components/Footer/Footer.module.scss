@@ -1,10 +1,19 @@
 .footer {
-  text-align: center;
-  margin: 20px 0 0 0;
+    margin: 20px 0 0 0px;
+    .disclaimer {
+        font-size: 14px;
+        margin-top: 1px;
+        margin-bottom: 0;
+        font-style: italic;
+    }
+    .copyright {
+        margin: 0;
+        text-align: center;
+    }
 }
 
-.disclaimer {
-  font-size: 14px;
-  margin-top: 1px;
-  font-style: italic;
+@media (max-width: 425px) {
+    .footer {
+        text-align: center;
+    }
 }

@@ -1,0 +1,86 @@
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.background {
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    .loadingContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 250px;
+        font-size: 22px;
+        z-index: 2;
+        padding: 40px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.493);
+        max-width: 400px;
+        min-width: 200px;
+        min-height: 300px;
+        max-height: 300px;
+        .loading {
+            margin: 0;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .fact {
+            height: 150px;
+            text-align: left;
+            flex: 1;
+        }
+        .button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            width: 200px;
+            padding: 10px 5px 10px 5px;
+            transition: 0.3s;
+            box-shadow: 0 0 5px hsl(0, 0%, 80%);
+            &:hover {
+                background-color: hsl(0, 0%, 95%);
+                color: #1a73e8;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .loadingContainer {
+        top: 150px;
+        padding: 20px;
+        font-size: 18px;
+        width: 320px;
+    }
+
+    .loading {
+        padding-top: 20px;
+    }
+}

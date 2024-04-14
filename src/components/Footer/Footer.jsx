@@ -6,11 +6,12 @@ const Footer = () => {
 
     return (
         <footer className={style.footer}>
-            <div>{`© ${currentYear} Tim Broderick`}
+            <div>
                 <p className={style.disclaimer}>
                     This is a personal project and is not affiliated with
-                    Google.
+                    Google.com
                 </p>
+                <p className={style.copyright}>{`© ${currentYear} Tim Broderick`}</p>
             </div>
         </footer>
     );

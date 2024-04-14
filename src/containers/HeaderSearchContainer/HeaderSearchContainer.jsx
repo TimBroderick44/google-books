@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { SearchContext } from "../../context/SearchProvider.jsx";
+import { SearchContext } from "../../context/SearchContext.jsx";
 import style from "./HeaderSearchContainer.module.scss";
 
 const HeaderSearchContainer = ({ children }) => {

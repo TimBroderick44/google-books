@@ -19,44 +19,74 @@
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1);
-    height: 170px;
+    height: 120px;
     width: 850px;
     margin-bottom: 3px;
-    
     position: relative;
+    .img {
+        width: 80px;
+        height: 120px;
+        border-radius: 5px;
+        margin: 0 0 0 5px;
+        box-shadow: 0 0 3px hsla(0, 0%, 3%, 0.5);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        .title {
+            width: 700px;
+            overflow: hidden;
+            display: inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 20px;
+            margin: 0;
+            display: block;
+        }
+        .author {
+            font-style: italic;
+            font-size: 16px;
+            margin: 0;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 14px;
+            width: 720px;
+        }
+    }
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
+@media (max-width: 768px) {
+    .book {
+        max-width: 70vw;
+        .container {
+            .title {
+                width: 50vw;
+            }
+            .description {
+                width: 50vw;
+            }
+        }
+    }
 }
 
-.title {
-    width: 700px;
-    overflow: hidden;
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    // margin-bottom: 0px;
-    margin-top: 5px;
-
-    display: block;
-    margin-bottom: 10px;
-}
-
-.author {
-    margin-top: 0;
-    font-style: italic;
-    margin-top: 0px;
-
-    position: absolute;
-    top: 45px;
-}
-
-.img {
-    width: 100px;
-    height: 150px;
-    border-radius: 5px;
-    box-shadow: 0 0 3px hsla(0, 0%, 3%, 0.5);
+@media (max-width: 425px) {
+    .book {
+        max-width: 300px;
+        .container {
+            .title {
+                font-size: 14px;
+                width: 180px;
+                margin: 0;
+            }
+            .description,
+            .author {
+                font-size: 10px;
+                width: 180px;
+                margin: 0;
+            }
+        }
+    }
 }

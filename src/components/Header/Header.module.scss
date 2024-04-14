@@ -1,7 +1,6 @@
 .middleHeading {
     font-weight: 400;
-    margin: -30px 20px 0 100px;
-    color: black;   
+    margin: -40px 20px 0 100px;
     text-shadow: 1px 1px 5px rgba(70, 67, 67, 0.089);
 }
 
@@ -24,6 +23,28 @@
     margin: -25px 0 0 40px;
     transition: font-size 1s ease;
 }
+
+@media (max-width: 425px) {
+    .middleLogo {
+        width: 350px;
+        height: 60px;
+    }
+    .middleHeading {
+        font-size: 28px;
+        margin: -33px 20px 0 125px;
+    }
+    .topHeading {
+        font-size: 12px;
+        margin: -20px 0 0 50px;
+    }
+    .topLogo {
+        width: 200px;
+        height: 40px;
+        margin-left: 5px;
+    }
+}
+
+
 
 
 

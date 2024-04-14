@@ -1,0 +1,15 @@
+.details {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    &:first-child {
+        margin-top: 7px;
+    }
+    &:last-child {
+        margin-bottom: -5px;
+    }
+    p {
+        margin: 0;
+    }
+}
+

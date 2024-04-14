@@ -1,32 +1,50 @@
-export const getBooksBySearchTerm = async (searchTerm) => {
+
+export const fetchBooks = async (searchTerm, searchType, bookFilter, maxResults = 40) => {
     if (!searchTerm || searchTerm.trim() === "") {
         console.log("No Search Term!");
         throw new Error("(Psst! You forgot to write something...)");
     }
-    const maxResults = 40;
 
-    const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&maxResults=${maxResults}`
-    );
+    // The URL only differs by the query prefix (e.g. inauthor:, isbn:, etc.)
+    let queryPrefix = "";
+    switch (searchType) {
+        case "author":
+            queryPrefix = "inauthor:";
+            break;
+        case "isbn":
+            queryPrefix = "isbn:";
+            break;  
+        case "category":
+            queryPrefix = "subject:";
+            break;  
+        case "title":
+            queryPrefix = "intitle:";
+            break;
+        default:
+            queryPrefix = "";
+            break;
+    }
 
-    /// TODO: All user to search by author or title (three choices: title, author or keyword)
+const filterQuery = bookFilter === "free" ? "&filter=free-ebooks" : 
+                    bookFilter === "paid" ? "&filter=paid-ebooks" : "";
 
-    // If the response is not ok, throw an error
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${queryPrefix}${encodeURIComponent(searchTerm)}&maxResults=${maxResults}${filterQuery}`;
+
+    const response = await fetch(url);
+
     if (!response.ok) {
         console.log("Error fetching books");
         throw new Error("An error has occurred. Please try again!");
     }
 
     const data = await response.json();
-    const items = data.items;
 
-    // If there are no items, throw an error
-    if (!items || items.length === 0) {
+    if (!data.items || data.items.length === 0) {
         console.log("Nothing matches");
-        throw new Error("No books were found for: " + searchTerm);
+        throw new Error("Uh-Oh!! Nothing was found for: " + searchTerm);
     }
 
-    return items;
+    return data.items;
 };
 
 export const getBookDetailsById = async (bookId) => {
