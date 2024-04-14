@@ -1,12 +1,24 @@
 <h1 style="font-weight: 900"> Google Books API Search </h1>
 
-Through using the Google Books API v1, users are to search through the library and use filers such as 'title', 'author', 'category', etc. to find a book to read. 
+Through using the Google Books API v1, users are to search through the library and use filters such as 'title', 'author', 'category', etc. to find a new book to read. 
 
 <h1 style="font-weight: 900"> Screenshots </h1>
 
-## 1. 
+## 1. Welome to the Google Books API Search
 
-![Beautiful.....](./assets/morsecode.png)
+![Such simple.....](./src/assets/screenshots/home.png)
+
+## 2. Learn Something Fun While You Wait!
+
+![Such fun fact.....](./src/assets/screenshots/FunFact.png)
+
+## 3. Sleek and Easy to Read
+
+![Such results](./src/assets/screenshots/results.png)
+
+## 4. Find Exactly What You Are Looking For
+
+![Such simple.....](./src/assets/screenshots/detail.png)
 
 ## What did I use to create it?
 
@@ -21,7 +33,7 @@ This project uses:
 -  Users are able to search for books and other resources with a variety of filters ('title', 'author', 'category', etc.)
 -  If users are not interested in spending money, there is a 'free' filter.
 -  Or, if users want to avoid those kind of materials, they can opt to search for 'paid' books and other high quality materials. 
--  When users cick on a title, they are able to get a more detailed overview of the resource.
+-  When users click on a title, they are able to get a more detailed overview of the resource.
 -  Each expanded view provides users with a detailed description, general product information, history of the author and reviews of the title (currently, a lot of the data that is being used is AI generated and simply a placeholder until legitimate data can be obtained).
 -  The expanded view is dynamic and depending on the salability of the material, it will either be available for purchase, a sample will be available or - for free resources - will be made available to the user. 
 
@@ -48,7 +60,7 @@ This project uses:
 -   [ ] Allow users to create lists of books (wishlists &/or 'to-read' lists)
 -   [ ] Utilise real data to provide reviews on the materials and their authors 
 -   [ ] Find a way to provide users with a sample of the resource (links provide by the API were often dead)
--   [ ] Utilise more animation and 3D models (however, it could interrput with the UI)
+-   [ ] Utilise more animation and 3D models (however, it could interrupt with the UI)
 
 ## Thank You!
 
