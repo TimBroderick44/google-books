@@ -60,14 +60,13 @@
     }
 }
 
-@media (max-width: 425px) {
-    .input {
-        width: 0vw;
-    }
-    .selectSearch {
-        width: 90vw;
-    }
-    .radio {
-        margin: 5px 0 0 0;
+@media ( min-width: 1px) {
+    .form {
+        .selectSearch {
+            width: 100%;
+            .input {
+                width: 100%;
+            }
+        }
     }
 }

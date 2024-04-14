@@ -12,7 +12,7 @@ export const DelayProvider = ({ children }) => {
 
     // Function to toggle delay
     const toggleDelay = (isDelayed) => {
-        setDelay(isDelayed ? 5000 : 0); // Set delay to 5000 ms or reset to 0 ms
+        setDelay(isDelayed ? 50000000 : 0); // Set delay to 5000 ms or reset to 0 ms
     };
 
     return (

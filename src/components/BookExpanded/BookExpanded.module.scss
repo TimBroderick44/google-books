@@ -18,9 +18,8 @@
         top: 6%;
         bottom: 10%;
         left: 22%;
-        max-width: 750px;
-        min-width: 750px;
         height: 80%;
+        width: 75% ;
         background-color: #f4f4f4;
         padding: 30px;
         border-radius: 10px;
@@ -76,10 +75,8 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 685px) {
     .expandedBook {
-        max-width: 70vw;
-        min-width: 70vw;
         height: 80vh;
         padding: 20px 30px 20px 20px;
     }

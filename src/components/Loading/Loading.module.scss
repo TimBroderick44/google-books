@@ -27,8 +27,6 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        position: absolute;
-        top: 250px;
         font-size: 22px;
         z-index: 2;
         padding: 40px;
@@ -72,15 +70,17 @@
     }
 }
 
-@media (max-width: 425px) {
-    .loadingContainer {
-        top: 150px;
-        padding: 20px;
-        font-size: 18px;
-        width: 320px;
-    }
-
-    .loading {
-        padding-top: 20px;
+@media (max-width: 500px) {
+    .background {
+        align-content: start;
+        flex-wrap: wrap;
+        .loadingContainer {
+            padding: 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            width: 240px;
+            min-height: 300px;
+            max-height: 300px;
+        }
     }
 }
