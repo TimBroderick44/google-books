@@ -1,6 +1,7 @@
-<h1 style="font-weight: 900"> Google Books API Search </h1>
+<h1 style="font-weight: 900"> Google Books API Search - https://tim-broderick.com/Bookoogle/ </h1>
 
-Through using the Google Books API v1, users are to search through the library and use filters such as 'title', 'author', 'category', etc. to find a new book to read. 
+
+Through using the Google Books API v1, users are to search through the library and use filters such as 'title', 'author', 'category', etc. to find a new book to read.
 
 <h1 style="font-weight: 900"> Screenshots </h1>
 
